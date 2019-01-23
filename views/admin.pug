@@ -1,0 +1,10 @@
+extends layout
+
+block content
+	form(action="/admin",method="post")
+		h1  Adminlogin
+		label  email
+		input#email(name='email')
+		label password
+		input#password(name='password')
+		button(type='submit') Sign up
