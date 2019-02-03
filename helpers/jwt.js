@@ -1,16 +1,16 @@
 const expressJwt = require('express-jwt');
-const config = require('../config/config.json');
+const config = require('../config.json');
 
 function jwt() {
-    const secret = config.secret;
-    return expressJwt({ secret:config.secret }).unless({
-        path: [
-            // public routes that don't require authentication
+    const { secret } = config;
+    return expressJwt({
+        secret : secret
+      }).unless({
+          path:[
             '/',
             '/admin',
-            '/users',
-            '/users/register',
-        ]
-    });
+          ]}
+      )
 }
+
 module.exports = jwt;

@@ -7,4 +7,6 @@ var AdminController = require('../controllers/admin')
 router.route('/')
 	.get(AdminController.loginAdminView)
   	.post(AdminController.loginAdmin)
+router.route('/home')
+	.get(AdminController.homeAdmin)
 module.exports = router;
