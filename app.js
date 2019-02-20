@@ -4,7 +4,6 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var session = require('express-session');
-var MongoStore = require('connect-mongo')(session);
 var config = require('./config.json')
 var jwt = require('express-jwt');
 var compression = require('compression')
@@ -12,15 +11,20 @@ var compression = require('compression')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var adminRouter = require('./routes/admin');
+var homeRouter = require('./routes/home');
+var categoryRouter = require('./routes/category');
 
 var app = express();
 
 app.use(compression())
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/test',{ useNewUrlParser: true });
+mongoose.set('useFindAndModify', false);
+mongoose.connect('mongodb://localhost/test', {
+  useNewUrlParser: true
+});
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function() {
+db.once('open', function () {
   console.log("connected!")
 });
 
@@ -30,18 +34,22 @@ app.set('view engine', 'pug');
 
 app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({
+  extended: false
+}));
 
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-
 // use JWT auth to secure the api
 app.use(jwt({
   secret: config.secret,
-  getToken: function fromHeaderOrQuerystring (req) {
-    if (req.headers.authorization && req.headers.authorization.split(' ')[0] === 'Bearer') {
-        return req.headers.authorization.split(' ')[1];
+  getToken: function fromHeaderOrQuerystring(req) {
+    const {
+      token
+    } = req.cookies;
+    if (token) {
+      return token;
     } else if (req.query && req.query.token) {
       return req.query.token;
     }
@@ -57,13 +65,15 @@ app.use(jwt({
 app.use('/', indexRouter);
 app.use('/admin', adminRouter);
 app.use('/users', usersRouter);
+app.use('/home', homeRouter);
+app.use('/category', categoryRouter);
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   next(createError(404));
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};

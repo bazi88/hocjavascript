@@ -1,0 +1,14 @@
+extends homeAdmin
+block contentWarpper
+    .row
+        .col-xl-12.col-lg-12
+            if success
+                h6(class="text-success") #{success}
+            .card.shadow.mb-4
+                .card-header.py-3.d-flex.flex-row.align-items-center.justify-content-between
+                    h6.m-0.font-weight-bold.text-primary Update Category
+                .card-body
+                    form(method="POST")
+                        <label class="full-width">Name Category: <input type="text" name="name" value="#{category.name}" class="full-width"></label><br>
+                        <label class="full-width">Seo: <input type="text" name="seo" value="#{category.seo}" class="full-width"></label><br>
+                        <input class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" type="submit" value="Submit">

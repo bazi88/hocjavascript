@@ -5,9 +5,9 @@
       "hocjavascript.ga": {
         "app.js": {
           "type": "-",
-          "size": 2081,
-          "lmtime": 1549129633782,
-          "modified": false
+          "size": 2320,
+          "lmtime": 1549692365331,
+          "modified": true
         },
         ".gitignore": {
           "type": "-",
@@ -16,16 +16,34 @@
           "modified": false
         },
         "controllers": {
+          "category.js": {
+            "type": "-",
+            "size": 1699,
+            "lmtime": 1549778008432,
+            "modified": false
+          },
           "vertifyToken.js": {
             "type": "-",
             "size": 495,
             "lmtime": 1548866516422,
             "modified": false
           },
+          "home.js": {
+            "type": "-",
+            "size": 507,
+            "lmtime": 1549379149210,
+            "modified": false
+          },
+          "post.js": {
+            "type": "-",
+            "size": 1291,
+            "lmtime": 1550588750709,
+            "modified": false
+          },
           "admin.js": {
             "type": "-",
-            "size": 725,
-            "lmtime": 1548866517323,
+            "size": 765,
+            "lmtime": 1549304820751,
             "modified": false
           },
           "user.js": {
@@ -4163,7 +4181,7 @@
         },
         "package-lock.json": {
           "type": "-",
-          "size": 128371,
+          "size": 130497,
           "lmtime": 1548520689024,
           "modified": true
         },
@@ -4174,10 +4192,22 @@
           "modified": false
         },
         "routes": {
+          "category.js": {
+            "type": "-",
+            "size": 724,
+            "lmtime": 1549695380096,
+            "modified": false
+          },
           "index.js": {
             "type": "-",
             "size": 299,
             "lmtime": 1548866548358,
+            "modified": false
+          },
+          "home.js": {
+            "type": "-",
+            "size": 298,
+            "lmtime": 1549386667704,
             "modified": false
           },
           "users.js": {
@@ -4186,18 +4216,36 @@
             "lmtime": 1548866547934,
             "modified": false
           },
+          "post.js": {
+            "type": "-",
+            "size": 425,
+            "lmtime": 1550588738819,
+            "modified": false
+          },
           "admin.js": {
             "type": "-",
-            "size": 423,
-            "lmtime": 1548866549130,
+            "size": 366,
+            "lmtime": 1549280251793,
             "modified": false
           }
         },
         "models": {
+          "category.js": {
+            "type": "-",
+            "size": 209,
+            "lmtime": 1549636700888,
+            "modified": true
+          },
+          "post.js": {
+            "type": "-",
+            "size": 255,
+            "lmtime": 1550588755906,
+            "modified": false
+          },
           "admin.js": {
             "type": "-",
             "size": 238,
-            "lmtime": 1548866518693,
+            "lmtime": 1549302665765,
             "modified": false
           },
           "user.js": {
@@ -4215,10 +4263,126 @@
         },
         "public": {
           "css": {
+            "admin.css": {
+              "type": "-",
+              "size": 1551,
+              "lmtime": 1549166523916,
+              "modified": false
+            },
+            "webfonts": {
+              "fa-regular-400.woff2": {
+                "type": "-",
+                "size": 14864,
+                "lmtime": 1550592005561,
+                "modified": false
+              },
+              "fa-regular-400.ttf": {
+                "type": "-",
+                "size": 40080,
+                "lmtime": 1550592005774,
+                "modified": false
+              },
+              "fa-solid-900.woff": {
+                "type": "-",
+                "size": 102224,
+                "lmtime": 1550592006265,
+                "modified": false
+              },
+              "fa-solid-900.eot": {
+                "type": "-",
+                "size": 209012,
+                "lmtime": 1550592006462,
+                "modified": false
+              },
+              "fa-regular-400.woff": {
+                "type": "-",
+                "size": 18164,
+                "lmtime": 1550592007298,
+                "modified": false
+              },
+              "fa-brands-400.ttf": {
+                "type": "-",
+                "size": 134160,
+                "lmtime": 1550592007682,
+                "modified": false
+              },
+              "fa-brands-400.woff": {
+                "type": "-",
+                "size": 87048,
+                "lmtime": 1550592007839,
+                "modified": false
+              },
+              "fa-brands-400.eot": {
+                "type": "-",
+                "size": 134396,
+                "lmtime": 1550592008477,
+                "modified": false
+              },
+              "fa-brands-400.svg": {
+                "type": "-",
+                "size": 749737,
+                "lmtime": 1550592009711,
+                "modified": false
+              },
+              "fa-solid-900.ttf": {
+                "type": "-",
+                "size": 208792,
+                "lmtime": 1550592009852,
+                "modified": false
+              },
+              "fa-solid-900.woff2": {
+                "type": "-",
+                "size": 79212,
+                "lmtime": 1550592013250,
+                "modified": false
+              },
+              "fa-regular-400.svg": {
+                "type": "-",
+                "size": 139825,
+                "lmtime": 1550592013407,
+                "modified": false
+              },
+              "fa-regular-400.eot": {
+                "type": "-",
+                "size": 40308,
+                "lmtime": 1550592013927,
+                "modified": false
+              },
+              "fa-solid-900.svg": {
+                "type": "-",
+                "size": 794054,
+                "lmtime": 1550592015166,
+                "modified": false
+              },
+              "fa-brands-400.woff2": {
+                "type": "-",
+                "size": 74296,
+                "lmtime": 1550592015852,
+                "modified": false
+              }
+            },
+            "dataTables.bootstrap4.min.css": {
+              "type": "-",
+              "size": 5222,
+              "lmtime": 1549379968249,
+              "modified": true
+            },
             "font-awesome.min.css": {
               "type": "-",
-              "size": 31000,
-              "lmtime": 1548866546232,
+              "size": 31019,
+              "lmtime": 1549162110678,
+              "modified": false
+            },
+            "sb-admin-2.min.css": {
+              "type": "-",
+              "size": 192951,
+              "lmtime": 1549173288086,
+              "modified": false
+            },
+            "jquery.modal.min.css": {
+              "type": "-",
+              "size": 3921,
+              "lmtime": 1550592004917,
               "modified": false
             },
             "bootstrap.min.css": {
@@ -4227,10 +4391,22 @@
               "lmtime": 1548866547510,
               "modified": false
             },
+            "all.min.css": {
+              "type": "-",
+              "size": 53849,
+              "lmtime": 1549292936450,
+              "modified": false
+            },
+            "adminStyle.css": {
+              "type": "-",
+              "size": 281,
+              "lmtime": 1550592005178,
+              "modified": false
+            },
             "style.css": {
               "type": "-",
-              "size": 23186,
-              "lmtime": 1549136657461,
+              "size": 23169,
+              "lmtime": 1549162120313,
               "modified": false
             }
           },
@@ -4355,6 +4531,12 @@
               "lmtime": 1548866528366,
               "modified": false
             },
+            "undraw_posting_photo.svg": {
+              "type": "-",
+              "size": 37285,
+              "lmtime": 1550592016105,
+              "modified": false
+            },
             "post-5.jpg": {
               "type": "-",
               "size": 69056,
@@ -4453,6 +4635,32 @@
             }
           },
           "js": {
+            "demo": {
+              "chart-bar-demo.js": {
+                "type": "-",
+                "size": 3189,
+                "lmtime": 1550592016608,
+                "modified": false
+              },
+              "chart-pie-demo.js": {
+                "type": "-",
+                "size": 1057,
+                "lmtime": 1550592017090,
+                "modified": false
+              },
+              "datatables-demo.js": {
+                "type": "-",
+                "size": 103,
+                "lmtime": 1550592017433,
+                "modified": false
+              },
+              "chart-area-demo.js": {
+                "type": "-",
+                "size": 3569,
+                "lmtime": 1550592017585,
+                "modified": false
+              }
+            },
             "jquery.min.js": {
               "type": "-",
               "size": 85582,
@@ -4465,10 +4673,40 @@
               "lmtime": 1548866521633,
               "modified": false
             },
+            "loadCMS.js": {
+              "type": "-",
+              "size": 60,
+              "lmtime": 1550593386490,
+              "modified": false
+            },
             "loadCss.js": {
               "type": "-",
               "size": 675,
-              "lmtime": 1549131222563,
+              "lmtime": 1549161820590,
+              "modified": false
+            },
+            "jquery.easing.min.js": {
+              "type": "-",
+              "size": 2532,
+              "lmtime": 1549173476047,
+              "modified": false
+            },
+            "jquery.modal.min.css": {
+              "type": "-",
+              "size": 0,
+              "lmtime": 1550592016443,
+              "modified": false
+            },
+            "Chart.min.js": {
+              "type": "-",
+              "size": 158741,
+              "lmtime": 1549290773158,
+              "modified": false
+            },
+            "sb-admin-2.min.js": {
+              "type": "-",
+              "size": 1106,
+              "lmtime": 1549173548594,
               "modified": false
             },
             "main.js": {
@@ -4482,7 +4720,7 @@
             "10734033_10152807328104395_6624585779528455613_n.jpg": {
               "type": "-",
               "size": 55943,
-              "lmtime": 1548570511478,
+              "lmtime": 1550592018024,
               "modified": false
             }
           },
@@ -4615,6 +4853,12 @@
               "lmtime": 1548866538059,
               "modified": false
             },
+            "all.min.css": {
+              "type": "-",
+              "size": 53777,
+              "lmtime": 1550592018205,
+              "modified": false
+            },
             "fontawesome-webfont.svg": {
               "type": "-",
               "size": 444379,
@@ -4638,34 +4882,96 @@
           }
         },
         "views": {
+          "categoryDelete.pug": {
+            "type": "-",
+            "size": 722,
+            "lmtime": 1549696447179,
+            "modified": false
+          },
+          "categoryCreate.pug": {
+            "type": "-",
+            "size": 826,
+            "lmtime": 1549779343567,
+            "modified": false
+          },
+          "layoutAdmin.pug": {
+            "type": "-",
+            "size": 731,
+            "lmtime": 1550588729298,
+            "modified": false
+          },
+          "categoryId.pug": {
+            "type": "-",
+            "size": 877,
+            "lmtime": 1549648776626,
+            "modified": false
+          },
           "error.pug": {
             "type": "-",
             "size": 0,
             "lmtime": 1548866550212,
             "modified": false
           },
+          "categoryAdmin.pug": {
+            "type": "-",
+            "size": 1974,
+            "lmtime": 1549696172310,
+            "modified": false
+          },
+          "homeAdmin.pug": {
+            "type": "-",
+            "size": 27197,
+            "lmtime": 1550588729460,
+            "modified": false
+          },
           "index.pug": {
             "type": "-",
             "size": 28451,
-            "lmtime": 1549134080256,
+            "lmtime": 1549166428227,
             "modified": false
           },
           "admin.pug": {
             "type": "-",
-            "size": 327,
-            "lmtime": 1548866550940,
+            "size": 2136,
+            "lmtime": 1549177816560,
             "modified": false
           },
           "layout.pug": {
             "type": "-",
-            "size": 569,
-            "lmtime": 1549135421864,
+            "size": 573,
+            "lmtime": 1549552054932,
             "modified": false
+          },
+          "post": {
+            "detail.pug": {
+              "type": "-",
+              "size": 1521,
+              "lmtime": 1550588729781,
+              "modified": false
+            },
+            "create.pug": {
+              "type": "-",
+              "size": 0,
+              "lmtime": 1550588729930,
+              "modified": false
+            },
+            "index.pug": {
+              "type": "-",
+              "size": 3306,
+              "lmtime": 1550592227004,
+              "modified": false
+            }
           },
           "footer.pug": {
             "type": "-",
             "size": 3398,
             "lmtime": 1548872149996,
+            "modified": false
+          },
+          "categoryUpdate.pug": {
+            "type": "-",
+            "size": 848,
+            "lmtime": 1549779394515,
             "modified": false
           },
           "header.pug": {

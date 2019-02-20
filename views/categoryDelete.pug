@@ -1,0 +1,14 @@
+extends homeAdmin
+block contentWarpper
+    .row
+        .col-xl-12.col-lg-12
+            if success
+                h6(class="text-success") #{success}
+            .card.shadow.mb-4
+                .card-header.py-3.d-flex.flex-row.align-items-center.justify-content-between
+                    h6.m-0.font-weight-bold.text-primary Delete Category
+                .card-body
+                    <form method="POST">
+                        <input class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm" type="submit" value="Are you want delete">
+                        <input class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" type="submit" value="Cancel">
+                    </form>

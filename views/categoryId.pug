@@ -1,0 +1,20 @@
+extends homeAdmin
+block contentWarpper
+    .row
+        .col-xl-12.col-lg-12
+            .card.shadow.mb-4
+                .card-header.py-3.d-flex.flex-row.align-items-center.justify-content-between
+                    h6.m-0.font-weight-bold.text-primary Details Category
+                .card-body
+                    .table-responsive
+                        table#dataTable.table.table-bordered(width='100%' cellspacing='0')
+                            thead
+                                tr
+                                    th Id
+                                    th Name
+                                    th Seo
+                            tbody
+                                tr
+                                    td= category._id
+                                    td= category.name
+                                    td= category.seo

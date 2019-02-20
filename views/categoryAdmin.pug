@@ -1,0 +1,34 @@
+extends homeAdmin.pug
+block head
+block contentWarpper
+    .container
+    .row
+        .col-xl-12.col-lg-12
+            .card.shadow.mb-4
+                .card-header.py-3.d-flex.flex-row.align-items-center.justify-content-between
+                    h6.m-0.font-weight-bold.text-primary Category
+                    a(href="/category/create" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm") Add Category
+                .card-body
+                    .table-responsive
+                        table#dataTable.table.table-bordered(width='100%' cellspacing='0')
+                            thead
+                                tr
+                                    th Id
+                                    th Name
+                                    th Seo
+                                    th Function
+                                tfoot
+                                    th Id
+                                    th Name
+                                    th Seo
+                                    th Function
+                                tbody
+                                    each categories in category
+                                        tr
+                                            td= categories._id
+                                            td= categories.name
+                                            td= categories.seo
+                                            td
+                                                a(href="/category/"+categories._id class="d-none d-sm-inline-block btn btn-sm btn-info shadow-sm third-width") View
+                                                a(href="/category/"+categories._id+"/update" class="d-none d-sm-inline-block btn btn-sm btn-warning shadow-sm third-width") Update
+                                                a(href="/category/"+categories._id+"/delete" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm third-width") Delete

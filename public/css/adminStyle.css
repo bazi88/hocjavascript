@@ -1,0 +1,27 @@
+.full-width {
+    width: 100%;
+}
+
+.third-width {
+    width: 33.3333333%;
+}
+
+.margin {
+    margin: 0px 10px;
+    display: inline-block;
+}
+
+.create-post label {
+    width: 10%;
+}
+
+.create-post input {
+    width: 90%;
+}
+
+#editor-container {
+    height: 375px;
+}
+#editor{
+    height:200px;
+}
