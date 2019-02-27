@@ -19,9 +19,10 @@
     width: 90%;
 }
 
-#editor-container {
-    height: 375px;
+.update-post label {
+    width: 10%;
 }
-#editor{
-    height:200px;
+
+.update-post input {
+    width: 90%;
 }

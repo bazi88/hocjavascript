@@ -2,9 +2,11 @@ var Category = require('../models/category');
 
 exports.categoryIndex = function (req, res) {
 	Category.find({}, function (err, category) {
+		const response = req.query.response;
 		if (err) return res.send("Error in find category")
 		res.render('categoryAdmin', {
-			'category': category
+			'category': category,
+			'response': response
 		});
 	})
 
@@ -45,14 +47,17 @@ exports.categoryUpdate = function (req, res) {
 	})
 }
 exports.actionUpdate = function (req, res) {
-	Category.findByIdAndUpdate(req.params.id, {
-		$set: req.body
-	}, function (err, category) {
+	var newObject = {
+		name:req.body.name,
+		seo:req.body.seo
+	}
+	Category.findByIdAndUpdate(req.params.id, newObject, function (err, category) {
 		if (err)
 			return res.send("Error")
-		res.render('categoryUpdate', {
-			'success': 'Update Success'
-		})
+		var response = {
+			success : 'Update Success'
+		}
+		res.redirect('/category'+'/?response=success');
 	})
 }
 exports.categoryDelete = function (req, res) {

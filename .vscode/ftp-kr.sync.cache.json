@@ -36,9 +36,9 @@
           },
           "post.js": {
             "type": "-",
-            "size": 1291,
-            "lmtime": 1550588750709,
-            "modified": false
+            "size": 1314,
+            "lmtime": 1550682283042,
+            "modified": true
           },
           "admin.js": {
             "type": "-",
@@ -4399,8 +4399,8 @@
             },
             "adminStyle.css": {
               "type": "-",
-              "size": 281,
-              "lmtime": 1550592005178,
+              "size": 313,
+              "lmtime": 1550672739584,
               "modified": false
             },
             "style.css": {
@@ -4675,8 +4675,8 @@
             },
             "loadCMS.js": {
               "type": "-",
-              "size": 60,
-              "lmtime": 1550593386490,
+              "size": 891,
+              "lmtime": 1550681990665,
               "modified": false
             },
             "loadCss.js": {
@@ -4957,8 +4957,8 @@
             },
             "index.pug": {
               "type": "-",
-              "size": 3306,
-              "lmtime": 1550592227004,
+              "size": 3476,
+              "lmtime": 1550680788573,
               "modified": false
             }
           },

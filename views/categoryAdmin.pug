@@ -9,6 +9,9 @@ block contentWarpper
                     h6.m-0.font-weight-bold.text-primary Category
                     a(href="/category/create" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm") Add Category
                 .card-body
+                    div
+                    if response
+                        p(class="success") Update Sucess
                     .table-responsive
                         table#dataTable.table.table-bordered(width='100%' cellspacing='0')
                             thead

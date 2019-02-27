@@ -18,28 +18,60 @@ exports.getPost = function(req, res) {
 
 exports.getDetailPost = function(req, res) {
     Post.findById(req.params.id, function(err, post) {
+        console.log(post);
         if (err)
             return res.send("Error post details")
-        res.render('post/detail', {
-            'post': post
+        Category.find({}, function(err, category) {
+            console.log(category)
+            if (err)
+                return res.send("Error get category")
+            res.render('post/detail', {
+                'post': post,
+                'category': category,
+            })
         })
+
+
+
     })
 }
 
 exports.createPost = function(req, res) {
+    const post = req.body;
+    console.log(post)
     const postInsert = {
-        title: req.body.title,
-        author: req.body.author,
-        content: req.body.content,
-        time: req.body.time,
-        category: req.body.category,
+        title: post.title,
+        author: post.author,
+        content: post.content,
+        time: post.time,
+        category: post.category,
     }
-    console.log(postInsert)
     Post.create(postInsert, function(err, post) {
         if (err)
-            res.send("Error when create post")
-        res.render('post/create', {
-            'success': 'Create post Success'
-        })
+            return res.send("Error when create post")
+        var response = {
+            status: 200,
+            success: 'Create Successfully'
+        }
+        res.end(JSON.stringify(response));
+    })
+}
+
+exports.updatePost = function(req,res){
+    var newObject = {
+		title:req.body.title,
+        author:req.body.author,
+        time:req.body.time,
+        category:req.body.category,
+        content:req.body.content
+    }
+    Post.findByIdAndUpdate(req.params.id,newObject,function(err,category){
+        var response = {
+            status: 200,
+            success: 'Update Successfully'
+        }
+        if(err)
+            res.send("err update")
+        res.send(response);
     })
 }

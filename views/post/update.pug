@@ -2,7 +2,7 @@ extends ../homeAdmin.pug
 
 block head
 
-    <link href="/css/quill.snow.css" rel="stylesheet">
+    <link href="https://cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet">
 
 block contentWarpper
 
@@ -48,15 +48,12 @@ block contentWarpper
 
                             select(name='category')
 
-                                each categories in category
-
-                                    option(value=categories.id) #{categories.name}
 
                         div
 
                             p Content body
                             <input name="content" type="hidden">
-                                <div id="editor" style="height:45%;">
+                                <div id="editor">
 
                                     <p>Hello World!</p>
 
@@ -119,24 +116,4 @@ block contentWarpper
 
                             tbody
 
-                                each post in posts
-
-                                    tr
-
-                                        td= post._id
-
-                                        td= post.title
-
-                                        td= post.category
-
-                                        td= post.author
-
-                                        td= post.time
-
-                                        td
-
-                                            a(href="/post/"+post._id class="d-none d-sm-inline-block btn btn-sm btn-info shadow-sm full-width") View
-
-        script(src="/js/quill.js")
-        script(src='/js/loadCMS.js')
-        script(src='/js/ajaxCMS.js')
+        script(src="https://cdn.quilljs.com/1.0.0/quill.js")

@@ -1,13 +1,66 @@
 extends ../homeAdmin.pug
 block head
+     <link href="/css/quill.snow.css" rel="stylesheet">
 block contentWarpper
     .container
     .row
         .col-xl-12.col-lg-12
             .card.shadow.mb-4
-                .card-header.py-3.d-flex.flex-row.align-items-center.justify-content-between
+                div(id="ex1" class="modal")
+                    div(class="old-content" data-content=post.content data-id=post._id)
+                    <h2>Update post</h2>
+
+                    form(class='update-post' method="POST")
+
+                        <input name="body" type="hidden">
+                        
+                        div
+
+                        div
+
+                            label Tittle
+
+                            input(type='text' name='title' value=post.title)
+
+                        div
+
+                            label Author
+
+                            input(type='text' name='author' value=post.author)
+
+                        div
+
+                            label Time
+
+                            input(type='text' name='time' value=post.time)
+
+                        div
+
+                            label Category
+
+                            select(name='category')
+                                each categories in category
+                                    option(value=post.category) #{categories.name}
+
+                        div
+
+                            p Content body
+                            <input name="content" type="hidden">
+                                <div id="editor" style="height:45%;">
+                                </div>
+
+                        div
+
+                            <button class="btn btn-primary" type="submit">Update Profile</button>
+
+                            button(href="#" class="btn btn-danger" rel="modal:close") Close
+                .card-header.py-3.d-flex-new.flex-row.align-items-center.justify-content-between
                     h6.m-0.font-weight-bold.text-primary Post Details
+                    a(href="#ex1" rel="modal:open" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm" id="update-post") Update Post
+                    a(href="/post/"+post._id+"/delete" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm") Delete Post
                 .card-body
+                    div
+                        p(class='success display-none')
                     .table-responsive
                         table#dataTable.table.table-bordered(width='100%' cellspacing='0')
                             thead
@@ -34,3 +87,6 @@ block contentWarpper
                                     td= post.author
                                     td= post.content
                                     td= post.time
+        script(src="/js/quill.js")
+        script(src='/js/loadCMS.js')
+        script(src='/js/bindDataCMS.js' defer)
