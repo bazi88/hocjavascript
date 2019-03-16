@@ -13,7 +13,7 @@ form.onsubmit = function() {
     console.log("Submitted", $(form).serialize(), $(form).serializeArray());
     var data = $(form).serializeArray();
     $.ajax({
-            "url": "/post/"+postID ,
+            "url": "/post/" + postID,
             "method": "POST",
             "data": data,
             success: function(result) {
@@ -22,7 +22,7 @@ form.onsubmit = function() {
                     $('.success').append(result.success);
                     $('.success').removeClass('display-none');
                     $('.success').addClass('display-block');
-                    removeSuccessClass()
+                    removeSuccessClassUpdate()
                     return false;
                 }
             }
@@ -30,9 +30,33 @@ form.onsubmit = function() {
         // No back end to actually submit to!
     return false;
 };
-function removeSuccessClass() {
+
+function removeSuccessClassUpdate() {
     setTimeout(function() {
         $('.success').removeClass('display-block');
         $('.success').addClass('display-none');
+        window.location.replace('/post');
     }, 3000)
+}
+
+var formDelete = document.querySelector('.delete-post');
+formDelete.onsubmit = function() {
+    event.preventDefault();
+    const postID = $('.old-content').data("id");
+    $.ajax({
+            "url": "/post/" + postID,
+            "method": "DELETE",
+            success: function(result) {
+                if (result.status === 200) {
+                    $.modal.close();
+                    $('.success').append(result.success);
+                    $('.success').removeClass('display-none');
+                    $('.success').addClass('display-block');
+                    removeSuccessClassUpdate()
+                    return false;
+                }
+            }
+        })
+        // No back end to actually submit to!
+    return false;
 }

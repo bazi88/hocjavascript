@@ -26,3 +26,28 @@
 .update-post input {
     width: 90%;
 }
+
+.display-none {
+    display: none;
+    color: green;
+}
+
+.display-block {
+    display: block;
+    color: green;
+}
+
+.margin {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.button-custom {
+    width: 30%;
+    height: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#editor{
+    height:23% !important;
+}

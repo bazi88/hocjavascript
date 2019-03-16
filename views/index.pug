@@ -5,6 +5,25 @@ block body
         <!-- container -->
         <div class="container">
             <!-- row -->
+            <div class="row">
+            each post,index in posts
+               - var categoryPost = post.category
+               if categoryPost.length > 0
+                each categoryPosts in categoryPost
+                    if categoryPosts == "Hot Category"
+                        <div class="col-md-6">
+                            <div class="post post-thumb">
+                                    <a class="post-img" href="blog-post.html"><img src="./img/post-#{index+1}.webp" alt=""></a>
+                                    <div class="post-body">
+                                        <div class="post-meta">
+                                            <a class="post-category cat-#{index+1}" href="category.html">#{post.category}</a>
+                                            <span class="post-date">#{post.time}</span>
+                                        </div>
+                                        <h3 class="post-title"><a href="blog-post.html">#{post.title}</a></h3>
+                                    </div>
+                            </div>
+                        </div>         
+            </div>
             <div class="row">	
                 <!-- post -->
                 <div class="col-md-6">

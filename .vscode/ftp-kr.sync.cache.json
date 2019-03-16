@@ -5,7 +5,7 @@
       "hocjavascript.ga": {
         "app.js": {
           "type": "-",
-          "size": 2320,
+          "size": 2471,
           "lmtime": 1549692365331,
           "modified": true
         },
@@ -18,9 +18,9 @@
         "controllers": {
           "category.js": {
             "type": "-",
-            "size": 1699,
+            "size": 1853,
             "lmtime": 1549778008432,
-            "modified": false
+            "modified": true
           },
           "vertifyToken.js": {
             "type": "-",
@@ -36,14 +36,14 @@
           },
           "post.js": {
             "type": "-",
-            "size": 1314,
+            "size": 2452,
             "lmtime": 1550682283042,
             "modified": true
           },
           "admin.js": {
             "type": "-",
             "size": 765,
-            "lmtime": 1549304820751,
+            "lmtime": 1549304821000,
             "modified": false
           },
           "user.js": {
@@ -61,6 +61,7 @@
             "modified": false
           }
         },
+        "uploads": {},
         "node_modules": {
           "term-size": {
             "readme.md": {
@@ -4167,7 +4168,7 @@
         },
         "package.json": {
           "type": "-",
-          "size": 632,
+          "size": 656,
           "lmtime": 1548866554071,
           "modified": true
         },
@@ -4181,7 +4182,7 @@
         },
         "package-lock.json": {
           "type": "-",
-          "size": 130497,
+          "size": 133012,
           "lmtime": 1548520689024,
           "modified": true
         },
@@ -4195,37 +4196,37 @@
           "category.js": {
             "type": "-",
             "size": 724,
-            "lmtime": 1549695380096,
+            "lmtime": 1551502662013,
             "modified": false
           },
           "index.js": {
             "type": "-",
             "size": 299,
-            "lmtime": 1548866548358,
+            "lmtime": 1549953421000,
             "modified": false
           },
           "home.js": {
             "type": "-",
             "size": 298,
-            "lmtime": 1549386667704,
+            "lmtime": 1549953389000,
             "modified": false
           },
           "users.js": {
             "type": "-",
             "size": 345,
-            "lmtime": 1548866547934,
+            "lmtime": 1549953422000,
             "modified": false
           },
           "post.js": {
             "type": "-",
-            "size": 425,
+            "size": 503,
             "lmtime": 1550588738819,
-            "modified": false
+            "modified": true
           },
           "admin.js": {
             "type": "-",
             "size": 366,
-            "lmtime": 1549280251793,
+            "lmtime": 1549280252000,
             "modified": false
           }
         },

@@ -1,8 +1,11 @@
 extends ../homeAdmin.pug
 
 block head
-
+    link(href="/css/all.min.css" rel="stylesheet" type="text/css")
+    link(href="/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css")
+    link(href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet")
     <link href="/css/quill.snow.css" rel="stylesheet">
+    <link href="/css/adminStyle.css" rel="stylesheet">
 
 block contentWarpper
 
@@ -18,57 +21,60 @@ block contentWarpper
 
                     <h2>Create post</h2>
 
-                    form(class='create-post' method="POST")
+                        <form action="/upload" method="post" enctype="multipart/form-data" class="create-image">
+                            <input type="file" accept="image/*" name="photo" id="imgInp">
+                            <img id="blah" src="#" alt="your image" style="max-width:100px"/>
+                            <input type="submit" value="upload">
+                        </form>
 
-                        <input name="body" type="hidden">
+                        form(class='create-post' method="POST" enctype="multipart/form-data")
+                            <input name="body" type="hidden">
 
-                        div
+                            div
 
-                        div
+                            div
 
-                            label Tittle
+                                label Tittle
 
-                            input(type='text' name='title')
+                                input(type='text' name='title')
 
-                        div
+                            div
 
-                            label Author
+                                label Author
 
-                            input(type='text' name='author')
+                                input(type='text' name='author')
 
-                        div
+                            div
 
-                            label Time
+                                label Time
 
-                            input(type='text' name='time')
+                                input(type='text' name='time')
 
-                        div
+                            div
 
-                            label Category
-
-                            select(name='category')
-
+                                label Category
                                 each categories in category
+                                    <label class="checkbox-inline"><input type="checkbox" name="category" value="#{categories.name}"/>#{categories.name}</label>
+                                //- select(name='category' class="form-control" id="sel2")
 
-                                    option(value=categories.id) #{categories.name}
+                                //-     each categories in category
 
-                        div
+                                //-         option(value=categories.id) #{categories.name}
 
-                            p Content body
-                            <input name="content" type="hidden">
-                                <div id="editor" style="height:45%;">
+                            div
 
-                                    <p>Hello World!</p>
+                                p Content body
+                                <input name="content" type="hidden">
+                                    <div id="editor" style="height:45%;">
 
-                                    <p>Some initial <strong>bold</strong> text</p>
+                                        <p>Hello World!</p>
 
-                                    <p><br></p>
+                                        <p>Some initial <strong>bold</strong> text</p>
 
-                                </div>
+                                        <p><br></p>
 
-
-
-                        div
+                                    </div>
+                            div
 
                             <button class="btn btn-primary" type="submit">Save Profile</button>
 

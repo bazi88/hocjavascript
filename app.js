@@ -1,5 +1,6 @@
 var createError = require('http-errors');
 var express = require('express');
+var multer = require('multer');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
@@ -15,6 +16,7 @@ var homeRouter = require('./routes/home');
 var categoryRouter = require('./routes/category');
 var postRouter = require('./routes/post');
 
+var upload = multer({ dest: 'uploads/' })
 var app = express();
 
 app.use(compression())
