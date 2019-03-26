@@ -19,6 +19,7 @@ var postRouter = require('./routes/post');
 var upload = multer({ dest: 'uploads/' })
 var app = express();
 
+app.locals.moment = require('moment');
 app.use(compression())
 var mongoose = require('mongoose');
 mongoose.set('useFindAndModify', false);

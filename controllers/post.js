@@ -42,7 +42,7 @@ exports.createPost = function(req, res) {
         title: post.title,
         author: post.author,
         content: post.content,
-        time: new Date(),
+        time: Date.now(),
         category: post.category,
     }
     Post.create(postInsert, function(err, post) {

@@ -45,10 +45,9 @@ block contentWarpper
                             input(type='text' name='time')
 
                         div
-
                             label Category
-
-                            select(name='category')
+                                each categories in category
+                                    <label class="checkbox-inline"><input type="checkbox" name="category" value="#{categories.name}"/>#{categories.name}</label>
 
 
                         div

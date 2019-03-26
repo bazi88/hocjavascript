@@ -984,3 +984,35 @@ RESPONSIVE
          display:none;
     }
 }
+.post-meta {
+    display:inline-flex;
+    width:100%;
+}
+.post-warp {
+    width:70%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color:#fff;
+}
+.post-date {
+    width: 30%;
+    text-align: right;
+}
+.post.post-thumb .post-meta .post-date1 {
+    color: #eceef2;
+}
+.post-meta .post-date1 {
+    font-size: 13px;
+    font-weight: 600;
+}
+.post-meta {
+    display:inline-flex;
+    width:100%;
+}
+.Hot {
+    display:none !important;
+}
+.Most {
+    display:none !important;
+}

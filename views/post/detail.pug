@@ -38,12 +38,9 @@ block contentWarpper
                             input(type='text' name='time' value=post.time)
 
                         div
-
-                            label Category
-
-                            select(name='category')
+                            label(style="display:inline-flex;width:100%") Category
                                 each categories in category
-                                    option(value=post.category) #{categories.name}
+                                    <div class="checkbox-inline"><input type="checkbox" name="category" value="#{categories.name}"/>#{categories.name}</div>
 
                         div
                             p Content body
